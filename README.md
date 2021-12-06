@@ -1,6 +1,6 @@
 # 1 - CREER DES CLES D'API SUR BINANCE
 
-Voir : https://console.clever-cloud.com/organisations/orga_2816e5a4-5fbe-46b1-b3bd-f771a017eab5/applications/app_2bb6a365-364e-4ed6-aa82-162837dcdf4a/logs
+Voir : https://www.binance.com/fr/support/faq/360002502072
 
 Vous mettez _jamais_ withdrawal comme droit sur vos API, d'accord ?
 
