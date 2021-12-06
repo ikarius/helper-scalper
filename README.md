@@ -23,7 +23,7 @@ Ces informations permettent de se connecter à l'API binance, pour :
 - Obtenir les données brutes des cours pour faire un calcul sommaire des résistances,
 - plein d'autres trucs ...
 
-# 3 Modifiez le fichier `telegram.py`
+# 3 - MODIFIER LE FICHIER `telegram.py`
 
 Plus compliqué, il vous créer une API sur télégram pour se connecter directement au channel:
 
@@ -44,3 +44,35 @@ TELEGRAM_API_ID = 000000 # ici_un_entier_sans_guillemets
 TELEGRAM_SCALP_SHORT_ID = 00000000 # demande dans le chan ...
 
 ```
+
+# 4 - PREPARER ET LANCER LE PROGRAMME
+
+Il y a deux scripts d'install dans ce repertoire mais en gros:
+d'install dans ce repertoire mais en gros:
+
+- il faut que Python 3 soit installé
+- il faut que les librairies necessaires soient installés
+
+Pour Python 3 sous windows, je ne sais pas trop: mais je suppose
+que commencer par : https://docs.python.org/3/using/windows.html peut-être une bonne idée...
+
+Ouvrez un terminal, puis dans le répertoire 'helper-scalper' :
+
+```
+pip install -r requirements.txt
+```
+
+pour installer les libs listées dans le fichier `requirements.txt`.
+
+puis
+
+```
+python telegram.py
+
+```
+
+pour lancer programme.
+
+Enjoy !
+
+Utilisez les issues (https://github.com/ikarius/helper-scalper/issues) plutot que de polluer le chan, merci !
