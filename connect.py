@@ -69,6 +69,7 @@ def set_leverage_mode(pair: str, leverage: int = 5):
     except Exception:
         print(f"ERR: modification du facteur de levier (déjà x{leverage} ?)")
 
+
 ######################################################
 
 
@@ -78,7 +79,7 @@ def scalp_helper(pair: str):
         pair = pair.upper() + "USDT"
 
     print(f"🤖 SCALP ORDER - PAIR: {pair}")
-    
+    print(f"https://www.binance.com/en/futures/{pair}")
     print("Modification mode de levier et facteur ...")
     set_leverage_mode(pair)
 
@@ -92,6 +93,6 @@ def scalp_helper(pair: str):
     print(f"Ticker : {ticker}")
 
     # Affiche les 5 premieres résistances :
-    print( "Résistances: ")
+    print("Résistances: ")
     for r in resistances.array:
         print(f"R : {r}")

@@ -1,11 +1,16 @@
 import telethon
 import connect
+import os
 
 # Ce programme ecoute le channel telegram
 
-TELEGRAM_API_HASH = ">>ici le API hash récupéré<<"
-TELEGRAM_API_ID = 000000 # ici_un_entier_sans_guillemets
-TELEGRAM_SCALP_SHORT_ID = 00000000 # demande dans le chan ... 
+TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", ">>ici le API hash récupéré<<")
+TELEGRAM_API_ID = int(
+    os.getenv("TELEGRAM_API_ID", 000000)
+)  # ici_un_entier_sans_guillemets
+TELEGRAM_SCALP_SHORT_ID = int(
+    os.getenv("TELEGRAM_SCALP_SHORT_ID", 000000)
+)  # demande dans le chan ...
 
 client = telethon.TelegramClient("ika_scalp_helper", TELEGRAM_API_ID, TELEGRAM_API_HASH)
 
@@ -25,7 +30,7 @@ async def incoming_msg(event):
 
 if __name__ == "__main__":
     print(f"En écoute sur le channel Telegram {TELEGRAM_SCALP_SHORT_ID}")
-    print("---")    
+    print("---")
 
     client.start()
     client.run_until_disconnected()
